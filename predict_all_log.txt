@@ -1,0 +1,888 @@
+﻿
++==============================================================+
+|                                                              |
+|  [SAT] AI-BASED DISASTER PREDICTION SYSTEM                  |
+|  [HP]  Himachal Pradesh -- Flood, Landslide & Extreme Weather|
+|                                                              |
+|  Models: CNN - LSTM - Random Forest - XGBoost                |
+|  Ensemble: Weighted Multi-Model Collaboration                |
+|                                                              |
++==============================================================+
+    
+
+  Loading trained models...
+  [CNN] Loaded saved model weights
+  [LSTM] Loaded saved model weights
+  [RF] Loaded saved model
+  [XGBoost] Loaded saved model
+
+=================================================================
+  ≡ƒîì RUNNING PREDICTION FOR ALL 8 REGIONS
+=================================================================
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Kullu
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Kullu
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  Step 2/7: Processing satellite imagery...
+python : C:\Users\mkt
+ha\.gemini\antigravit
+y\scratch\disaster_pr
+ediction_hp\src\image
+_processing\ndvi_proc
+essor.py:31: 
+RuntimeWarning: 
+invalid value 
+encountered in divide
+At line:1 char:1
++ python main.py 
+predict --all 2>&1 | 
+Out-File -FilePath 
+.\predict_all_ ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (C:\User   
+ s\mktha\...tered    
+ in divide:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ndvi = 
+np.where(denominator 
+> 0, (nir - red) / 
+denominator, 0)
+    NDWI Water Expansion: 64.5%
+    NDVI Vegetation Loss: 69.4%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: flood (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 38.5 mm
+    Extreme Probability: 25.7%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 81.4%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.4847 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö KULLU
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:27
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 81.4%
+  Severity Level       : Critical
+  Disaster Type        : Flood
+  Risk Score           : 0.4847
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2567 Γöé     0.0642 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.9987 Γöé     0.2497 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.1331 Γöé         0.0533 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.6451 Γöé         0.129  Γöé
+Γöé Construction    Γöé 10%      Γöé  0.0245 Γöé         0.0025 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   31.5 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 2:   33.4 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 3:   38.5 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   37.8 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   34.8 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   29.5 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 7:   27.1 mm ΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 25.7% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Flood detected with high risk score (0.48). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 242
+
+  Resources Required:
+    Medical Teams                 : 7
+    Emergency Rations             : 1454
+    Rescue Personnel              : 72
+    Temporary Shelters            : 38
+    Medical Supplies Kg           : 484
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Kullu Relief Center
+  Route    : Kullu Relief Center ΓåÆ Kullu
+  Distance : 3 km
+  ETA      : 0.1 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Shimla
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Shimla
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  Step 2/7: Processing satellite imagery...
+C:\Users\mktha\.gemin
+i\antigravity\scratch
+\disaster_prediction_
+hp\src\image_processi
+ng\ndwi_processor.py:
+31: RuntimeWarning: 
+invalid value 
+encountered in divide
+  ndwi = 
+np.where(denominator 
+> 0, (green - nir) / 
+denominator, 0)
+    NDWI Water Expansion: 28.3%
+    NDVI Vegetation Loss: 92.5%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: landslide (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 39.0 mm
+    Extreme Probability: 26.0%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 81.5%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.4180 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö SHIMLA
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:27
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 81.5%
+  Severity Level       : Critical
+  Disaster Type        : Landslide
+  Risk Score           : 0.4180
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2599 Γöé     0.065  Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.9985 Γöé     0.2496 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.1178 Γöé         0.0471 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.2825 Γöé         0.0565 Γöé
+Γöé Construction    Γöé 10%      Γöé  0.1437 Γöé         0.0144 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   31.0 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 2:   33.0 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 3:   39.0 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   38.2 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   36.0 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   30.0 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 7:   27.3 mm ΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 26.0% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Landslide detected with high risk score (0.42). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 209
+
+  Resources Required:
+    Medical Teams                 : 6
+    Emergency Rations             : 1254
+    Rescue Personnel              : 62
+    Temporary Shelters            : 33
+    Medical Supplies Kg           : 418
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Shimla HQ
+  Route    : Shimla HQ ΓåÆ Shimla
+  Distance : 5 km
+  ETA      : 0.2 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Mandi
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Mandi
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  Step 2/7: Processing satellite imagery...
+C:\Users\mktha\.gemin
+i\antigravity\scratch
+\disaster_prediction_
+hp\src\image_processi
+ng\ndvi_processor.py:
+31: RuntimeWarning: 
+invalid value 
+encountered in divide
+  ndvi = 
+np.where(denominator 
+> 0, (nir - red) / 
+denominator, 0)
+    NDWI Water Expansion: 64.5%
+    NDVI Vegetation Loss: 69.4%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: flood (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 43.7 mm
+    Extreme Probability: 29.1%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 82.2%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.4700 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö MANDI
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:27
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 82.2%
+  Severity Level       : Critical
+  Disaster Type        : Flood
+  Risk Score           : 0.4700
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2915 Γöé     0.0729 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.9987 Γöé     0.2497 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.0962 Γöé         0.0385 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.6451 Γöé         0.129  Γöé
+Γöé Construction    Γöé 10%      Γöé  0.0245 Γöé         0.0025 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   24.1 mm ΓûêΓûêΓûêΓûê
+  Day 2:   27.5 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 3:   38.2 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   38.8 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   43.7 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   34.5 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 7:   30.8 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 29.1% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Flood detected with high risk score (0.47). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 235
+
+  Resources Required:
+    Medical Teams                 : 7
+    Emergency Rations             : 1410
+    Rescue Personnel              : 70
+    Temporary Shelters            : 37
+    Medical Supplies Kg           : 470
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Mandi Relief Center
+  Route    : Mandi Relief Center ΓåÆ Mandi
+  Distance : 4 km
+  ETA      : 0.2 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Kangra
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Kangra
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  Step 2/7: Processing satellite imagery...
+    NDWI Water Expansion: 0.6%
+    NDVI Vegetation Loss: 29.3%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: normal (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 13.3 mm
+    Extreme Probability: 8.8%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 2.3%
+    Severity: Low
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.7183 (High)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_SUPPORT
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö KANGRA
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:27
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 2.3%
+  Severity Level       : Low
+  Disaster Type        : Mixed/Normal
+  Risk Score           : 0.7183
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      0      Γöé     0      Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.0885 Γöé     0.0221 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      0      Γöé     0      Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.0034 Γöé     0.0009 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  1      Γöé         0.4    Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.0056 Γöé         0.0011 Γöé
+Γöé Construction    Γöé 10%      Γöé  0.1714 Γöé         0.0171 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   10.4 mm ΓûêΓûê
+  Day 2:    9.0 mm Γûê
+  Day 3:    7.4 mm Γûê
+  Day 4:    3.9 mm Γûê
+  Day 5:   11.8 mm ΓûêΓûê
+  Day 6:   10.1 mm ΓûêΓûê
+  Day 7:   13.3 mm ΓûêΓûê
+  Extreme Event Probability: 8.8% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_SUPPORT
+  Priority : High
+  Reasoning: Terrain is difficult with limited road access. Aerial supply drops recommended for rapid response.
+
+  Deployment:
+    Type                          : Helicopter supply drops
+    Source                        : Dharamshala Airbase / nearest helipad
+    Estimated Arrival Hours       : 2.2817
+    Helicopters Needed            : 4
+    Sorties Planned               : 7
+
+  Resources Required:
+    Medical Teams                 : 5
+    Food Packets                  : 1436
+    Rescue Personnel              : 57
+    Temporary Shelters            : 28
+    Medical Supplies Kg           : 359
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Dharamshala Airbase
+  Route    : Dharamshala Airbase ΓåÆ Kangra
+  Distance : 20 km
+  ETA      : 0.5 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Manali
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Manali
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  Step 2/7: Processing satellite imagery...
+    NDWI Water Expansion: 0.5%
+    NDVI Vegetation Loss: 25.9%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: normal (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 31.8 mm
+    Extreme Probability: 21.2%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 5.4%
+    Severity: Low
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.7121 (High)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_SUPPORT
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö MANALI
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:27
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 5.4%
+  Severity Level       : Low
+  Disaster Type        : Mixed/Normal
+  Risk Score           : 0.7121
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      0      Γöé     0      Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2121 Γöé     0.053  Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      0      Γöé     0      Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.0034 Γöé     0.0009 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  1      Γöé          0.4   Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé          0.3   Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.0052 Γöé          0.001 Γöé
+Γöé Construction    Γöé 10%      Γöé  0.1104 Γöé          0.011 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   31.8 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 2:   29.4 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 3:   26.0 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 4:   24.6 mm ΓûêΓûêΓûêΓûê
+  Day 5:   17.0 mm ΓûêΓûêΓûê
+  Day 6:   18.4 mm ΓûêΓûêΓûê
+  Day 7:   18.3 mm ΓûêΓûêΓûê
+  Extreme Event Probability: 21.2% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_SUPPORT
+  Priority : High
+  Reasoning: Terrain is difficult with limited road access. Aerial supply drops recommended for rapid response.
+
+  Deployment:
+    Type                          : Helicopter supply drops
+    Source                        : Dharamshala Airbase / nearest helipad
+    Estimated Arrival Hours       : 2.2879
+    Helicopters Needed            : 4
+    Sorties Planned               : 7
+
+  Resources Required:
+    Medical Teams                 : 5
+    Food Packets                  : 1424
+    Rescue Personnel              : 56
+    Temporary Shelters            : 28
+    Medical Supplies Kg           : 356
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Kullu Relief Center
+  Route    : Kullu Relief Center ΓåÆ Manali
+  Distance : 43 km
+  ETA      : 1.1 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Chamba
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Chamba
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  Step 2/7: Processing satellite imagery...
+C:\Users\mktha\.gemin
+i\antigravity\scratch
+\disaster_prediction_
+hp\src\image_processi
+ng\ndvi_processor.py:
+31: RuntimeWarning: 
+invalid value 
+encountered in divide
+  ndvi = 
+np.where(denominator 
+> 0, (nir - red) / 
+denominator, 0)
+    NDWI Water Expansion: 64.5%
+    NDVI Vegetation Loss: 69.4%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: flood (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 40.2 mm
+    Extreme Probability: 26.8%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 81.7%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.4987 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö CHAMBA
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:28
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 81.7%
+  Severity Level       : Critical
+  Disaster Type        : Flood
+  Risk Score           : 0.4987
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2683 Γöé     0.0671 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.9987 Γöé     0.2497 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.1679 Γöé         0.0672 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.6451 Γöé         0.129  Γöé
+Γöé Construction    Γöé 10%      Γöé  0.0245 Γöé         0.0025 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   28.0 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 2:   31.1 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 3:   40.2 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   39.7 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   40.2 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   32.0 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 7:   29.1 mm ΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 26.8% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Flood detected with high risk score (0.50). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 249
+
+  Resources Required:
+    Medical Teams                 : 7
+    Emergency Rations             : 1496
+    Rescue Personnel              : 74
+    Temporary Shelters            : 39
+    Medical Supplies Kg           : 498
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Dharamshala Airbase
+  Route    : Dharamshala Airbase ΓåÆ Chamba
+  Distance : 150 km
+  ETA      : 6.1 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Bilaspur
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Bilaspur
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  Step 2/7: Processing satellite imagery...
+    NDWI Water Expansion: 0.6%
+    NDVI Vegetation Loss: 29.3%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: normal (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 43.4 mm
+    Extreme Probability: 28.9%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 7.3%
+    Severity: Low
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.7183 (High)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_SUPPORT
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö BILASPUR
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:28
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 7.3%
+  Severity Level       : Low
+  Disaster Type        : Mixed/Normal
+  Risk Score           : 0.7183
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      0      Γöé     0      Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2892 Γöé     0.0723 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      0      Γöé     0      Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.0034 Γöé     0.0009 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  1      Γöé         0.4    Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.0056 Γöé         0.0011 Γöé
+Γöé Construction    Γöé 10%      Γöé  0.1714 Γöé         0.0171 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   43.4 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 2:   42.0 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 3:   37.8 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   33.9 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   20.5 mm ΓûêΓûêΓûêΓûê
+  Day 6:   21.6 mm ΓûêΓûêΓûêΓûê
+  Day 7:   21.4 mm ΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 28.9% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_SUPPORT
+  Priority : High
+  Reasoning: Terrain is difficult with limited road access. Aerial supply drops recommended for rapid response.
+
+  Deployment:
+    Type                          : Helicopter supply drops
+    Source                        : Dharamshala Airbase / nearest helipad
+    Estimated Arrival Hours       : 2.2817
+    Helicopters Needed            : 4
+    Sorties Planned               : 7
+
+  Resources Required:
+    Medical Teams                 : 5
+    Food Packets                  : 1436
+    Rescue Personnel              : 57
+    Temporary Shelters            : 28
+    Medical Supplies Kg           : 359
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Shimla HQ
+  Route    : Shimla HQ ΓåÆ Shimla ΓåÆ Bilaspur
+  Distance : 95 km
+  ETA      : 2.4 hours
+
+=================================================================
+
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Solan
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Solan
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  Step 2/7: Processing satellite imagery...
+C:\Users\mktha\.gemin
+i\antigravity\scratch
+\disaster_prediction_
+hp\src\image_processi
+ng\ndwi_processor.py:
+31: RuntimeWarning: 
+invalid value 
+encountered in divide
+  ndwi = 
+np.where(denominator 
+> 0, (green - nir) / 
+denominator, 0)
+    NDWI Water Expansion: 15.0%
+    NDVI Vegetation Loss: 73.4%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: landslide (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 39.9 mm
+    Extreme Probability: 26.6%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 81.3%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.3639 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö SOLAN
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:06:28
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 81.3%
+  Severity Level       : Critical
+  Disaster Type        : Landslide
+  Risk Score           : 0.3639
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2657 Γöé     0.0664 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.987  Γöé     0.2467 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.0555 Γöé         0.0222 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.1501 Γöé         0.03   Γöé
+Γöé Construction    Γöé 10%      Γöé  0.1166 Γöé         0.0117 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   26.3 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 2:   28.3 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 3:   36.1 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   37.4 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   39.9 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   32.2 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 7:   29.3 mm ΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 26.6% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Landslide detected with high risk score (0.36). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 181
+
+  Resources Required:
+    Medical Teams                 : 5
+    Emergency Rations             : 1091
+    Rescue Personnel              : 54
+    Temporary Shelters            : 29
+    Medical Supplies Kg           : 363
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Shimla HQ
+  Route    : Shimla HQ ΓåÆ Solan
+  Distance : 50 km
+  ETA      : 1.4 hours
+
+=================================================================
+
+
+=================================================================
+  ≡ƒôè GENERATING OUTPUTS
+=================================================================
+
+  [Map] Interactive map saved: C:\Users\mktha\.gemini\antigravity\scratch\disaster_prediction_hp\outputs\disaster_map.html
+  [Report] HTML report saved: C:\Users\mktha\.gemini\antigravity\scratch\disaster_prediction_hp\outputs\report.html
+
+=================================================================
+  ≡ƒôï PREDICTION SUMMARY ΓÇö ALL REGIONS
+=================================================================
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Region   Γöé Disaster%   Γöé Severity   Γöé Type         Γöé   Risk Γöé Action         Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Kullu    Γöé 81.4%       Γöé Critical   Γöé Flood        Γöé  0.485 Γöé AIR_EVACUATION Γöé
+Γöé Shimla   Γöé 81.5%       Γöé Critical   Γöé Landslide    Γöé  0.418 Γöé AIR_EVACUATION Γöé
+Γöé Mandi    Γöé 82.2%       Γöé Critical   Γöé Flood        Γöé  0.47  Γöé AIR_EVACUATION Γöé
+Γöé Kangra   Γöé 2.3%        Γöé Low        Γöé Mixed/Normal Γöé  0.718 Γöé AIR_SUPPORT    Γöé
+Γöé Manali   Γöé 5.4%        Γöé Low        Γöé Mixed/Normal Γöé  0.712 Γöé AIR_SUPPORT    Γöé
+Γöé Chamba   Γöé 81.7%       Γöé Critical   Γöé Flood        Γöé  0.499 Γöé AIR_EVACUATION Γöé
+Γöé Bilaspur Γöé 7.3%        Γöé Low        Γöé Mixed/Normal Γöé  0.718 Γöé AIR_SUPPORT    Γöé
+Γöé Solan    Γöé 81.3%       Γöé Critical   Γöé Landslide    Γöé  0.364 Γöé AIR_EVACUATION Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  Outputs saved to: outputs/
+  ΓåÆ disaster_map.html (interactive Folium map)
+  ΓåÆ report.html (full HTML report)
+=================================================================
+
+
+Γ£à Prediction complete! Check the outputs/ directory.

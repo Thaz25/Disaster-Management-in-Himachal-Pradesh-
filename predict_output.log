@@ -1,0 +1,132 @@
+﻿python : Traceback 
+(most recent call 
+last):
+At line:1 char:1
++ python main.py 
+predict --region 
+Kullu 2>&1 | 
+Out-File -FilePath 
+.\pre ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Traceba   
+ ck (most recent     
+call last)::Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  File "C:\Users\mkth
+a\.gemini\antigravity
+\scratch\disaster_pre
+diction_hp\main.py", 
+line 163, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\mkth
+a\.gemini\antigravity
+\scratch\disaster_pre
+diction_hp\main.py", 
+line 105, in main
+    print_banner()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\mkth
+a\.gemini\antigravity
+\scratch\disaster_pre
+diction_hp\main.py", 
+line 38, in 
+print_banner
+    print(f"{Fore.CYA
+N}{Style.BRIGHT}{bann
+er}{Style.RESET_ALL}"
+)
+    ~~~~~^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^
+  File "C:\Users\mkth
+a\AppData\Local\Packa
+ges\PythonSoftwareFou
+ndation.Python.3.13_q
+bz5n2kfra8p0\LocalCac
+he\local-packages\Pyt
+hon313\site-packages\
+colorama\ansitowin32.
+py", line 47, in 
+write
+    self.__convertor.
+write(text)
+    ~~~~~~~~~~~~~~~~~
+~~~~~^^^^^^
+  File "C:\Users\mkth
+a\AppData\Local\Packa
+ges\PythonSoftwareFou
+ndation.Python.3.13_q
+bz5n2kfra8p0\LocalCac
+he\local-packages\Pyt
+hon313\site-packages\
+colorama\ansitowin32.
+py", line 177, in 
+write
+    self.write_and_co
+nvert(text)
+    ~~~~~~~~~~~~~~~~~
+~~~~~^^^^^^
+  File "C:\Users\mkth
+a\AppData\Local\Packa
+ges\PythonSoftwareFou
+ndation.Python.3.13_q
+bz5n2kfra8p0\LocalCac
+he\local-packages\Pyt
+hon313\site-packages\
+colorama\ansitowin32.
+py", line 202, in 
+write_and_convert
+    self.write_plain_
+text(text, cursor, 
+start)
+    ~~~~~~~~~~~~~~~~~
+~~~~^^^^^^^^^^^^^^^^^
+^^^^
+  File "C:\Users\mkth
+a\AppData\Local\Packa
+ges\PythonSoftwareFou
+ndation.Python.3.13_q
+bz5n2kfra8p0\LocalCac
+he\local-packages\Pyt
+hon313\site-packages\
+colorama\ansitowin32.
+py", line 210, in 
+write_plain_text
+    self.wrapped.writ
+e(text[start:end])
+    ~~~~~~~~~~~~~~~~~
+~^^^^^^^^^^^^^^^^^
+  File "C:\Program Fi
+les\WindowsApps\Pytho
+nSoftwareFoundation.P
+ython.3.13_3.13.3312.
+0_x64__qbz5n2kfra8p0\
+Lib\encodings\cp1252.
+py", line 19, in 
+encode
+    return codecs.cha
+rmap_encode(input,sel
+f.errors,encoding_tab
+le)[0]
+           ~~~~~~~~~~
+~~~~~~~~~~~^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+^^^
+UnicodeEncodeError: 
+'charmap' codec 
+can't encode 
+characters in 
+position 2-65: 
+character maps to 
+<undefined>

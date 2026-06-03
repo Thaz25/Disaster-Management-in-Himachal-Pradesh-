@@ -1,0 +1,1008 @@
+﻿
++==============================================================+
+|                                                              |
+|  [SAT] AI-BASED DISASTER PREDICTION SYSTEM                  |
+|  [HP]  Himachal Pradesh -- Flood, Landslide & Extreme Weather|
+|                                                              |
+|  Models: CNN - LSTM - Random Forest - XGBoost                |
+|  Ensemble: Weighted Multi-Model Collaboration                |
+|                                                              |
++==============================================================+
+    
+
+============================================================
+  SYNTHETIC DATA GENERATOR
+============================================================
+
+[1/4] Generating satellite images...
+  ΓåÆ Generated 498 images (166 per class)
+
+[2/4] Generating weather data...
+  ΓåÆ Generated weather data for 8 regions
+
+[3/4] Generating DEM terrain data...
+  ΓåÆ Generated DEM data for 8 regions
+
+[4/4] Generating training labels...
+  ΓåÆ Train: 348, Val: 75, Test: 75
+
+Γ£ô All synthetic data saved to: C:\Users\mktha\.gemini\antigravity\scratch\disaster_prediction_hp\data\synthetic
+============================================================
+
+Γ£à Synthetic data generation complete!
+   You can now run: python main.py train
+
++==============================================================+
+|                                                              |
+|  [SAT] AI-BASED DISASTER PREDICTION SYSTEM                  |
+|  [HP]  Himachal Pradesh -- Flood, Landslide & Extreme Weather|
+|                                                              |
+|  Models: CNN - LSTM - Random Forest - XGBoost                |
+|  Ensemble: Weighted Multi-Model Collaboration                |
+|                                                              |
++==============================================================+
+    
+
+=================================================================
+  ≡ƒÜÇ TRAINING PIPELINE ΓÇö STARTING
+=================================================================
+
+[Pipeline Step 1/4] Using existing synthetic data
+
+[Pipeline Step 2/4] Training CNN Classifier...
+
+  [CNN] Training disaster classifier...
+  [CNN] Device: cpu
+  [CNN] Epoch 5/30 | Loss: 0.0000 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Epoch 10/30 | Loss: 0.0000 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Epoch 15/30 | Loss: 0.0019 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Epoch 20/30 | Loss: 0.0001 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Epoch 25/30 | Loss: 0.0000 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Epoch 30/30 | Loss: 0.0002 | Train Acc: 100.0% | Val Acc: 100.0%
+  [CNN] Training complete. Best Val Acc: 100.0%
+
+[Pipeline Step 3/4] Training LSTM Rainfall Predictor...
+
+  [LSTM] Training rainfall predictor...
+  [LSTM] Device: cpu
+  [LSTM] Training sequences: 192
+  [LSTM] Epoch 10/50 | Train Loss: 1.0928 | Val Loss: 0.2155
+  [LSTM] Epoch 20/50 | Train Loss: 1.0034 | Val Loss: 0.4623
+  [LSTM] Epoch 30/50 | Train Loss: 0.8691 | Val Loss: 1.0083
+  [LSTM] Epoch 40/50 | Train Loss: 0.8514 | Val Loss: 0.2553
+  [LSTM] Epoch 50/50 | Train Loss: 0.7563 | Val Loss: 0.6545
+  [LSTM] Training complete. Best Val Loss: 0.2155
+
+[Pipeline Step 4/4] Training Random Forest & XGBoost...
+python : C:\Users\mkt
+ha\.gemini\antigravit
+y\scratch\disaster_pr
+ediction_hp\src\image
+_processing\ndwi_proc
+essor.py:31: 
+RuntimeWarning: 
+invalid value 
+encountered in divide
+At line:1 char:86
++ ... .txt -Encoding 
+utf8; python main.py 
+train --skip-datagen 
+2>&1 | Out-F ...
++                    
+      ~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (C:\User   
+ s\mktha\...tered    
+ in divide:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ndwi = 
+np.where(denominator 
+> 0, (green - nir) / 
+denominator, 0)
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+C:\Users\mktha\.gemin
+i\antigravity\scratch
+\disaster_prediction_
+hp\src\image_processi
+ng\ndvi_processor.py:
+31: RuntimeWarning: 
+invalid value 
+encountered in divide
+  ndvi = 
+np.where(denominator 
+> 0, (nir - red) / 
+denominator, 0)
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+  [Weather] Using synthetic data for Manali
+  [Terrain] Using synthetic DEM for Manali
+  [Weather] Using synthetic data for Chamba
+  [Terrain] Using synthetic DEM for Chamba
+  [Weather] Using synthetic data for Bilaspur
+  [Terrain] Using synthetic DEM for Bilaspur
+  [Weather] Using synthetic data for Solan
+  [Terrain] Using synthetic DEM for Solan
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  [Weather] Using synthetic data for Shimla
+  [Terrain] Using synthetic DEM for Shimla
+  [Weather] Using synthetic data for Mandi
+  [Terrain] Using synthetic DEM for Mandi
+  [Weather] Using synthetic data for Kangra
+  [Terrain] Using synthetic DEM for Kangra
+
+  [Ensemble] Training Random Forest...
+  [RF] Training accuracy: 100.0%
+  [Ensemble] Training XGBoost...
+C:\Users\mktha\AppDat
+a\Local\Packages\Pyth
+onSoftwareFoundation.
+Python.3.13_qbz5n2kfr
+a8p0\LocalCache\local
+-packages\Python313\s
+ite-packages\xgboost\
+training.py:200: 
+UserWarning: 
+[11:05:40] WARNING: C
+:\actions-runner\_wor
+k\xgboost\xgboost\src
+\learner.cc:782: 
+Parameters: { 
+"use_label_encoder" 
+} are not used.
+
+  bst.update(dtrain, 
+iteration=i, 
+fobj=obj)
+  [XGBoost] Training accuracy: 100.0%
+
+=================================================================
+  Γ£à TRAINING PIPELINE ΓÇö COMPLETE
+=================================================================
+  CNN Best Val Accuracy  : 100.0%
+  LSTM Best Val Loss     : 0.2155
+  RF Training Accuracy   : 100.0%
+  XGBoost Training Accuracy: 100.0%
+
+  Models saved to: models/saved/
+=================================================================
+
+Γ£à Training complete! You can now run predictions:
+   python main.py predict --region Kullu
+   python main.py predict --all
+
++==============================================================+
+|                                                              |
+|  [SAT] AI-BASED DISASTER PREDICTION SYSTEM                  |
+|  [HP]  Himachal Pradesh -- Flood, Landslide & Extreme Weather|
+|                                                              |
+|  Models: CNN - LSTM - Random Forest - XGBoost                |
+|  Ensemble: Weighted Multi-Model Collaboration                |
+|                                                              |
++==============================================================+
+    
+
+  Loading trained models...
+  [CNN] Loaded saved model weights
+  [LSTM] Loaded saved model weights
+  [RF] Loaded saved model
+  [XGBoost] Loaded saved model
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  ≡ƒôí PREDICTING: Kullu
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+  Step 1/7: Fetching data...
+  [Satellite] Using synthetic data for Kullu
+  [Weather] Using synthetic data for Kullu
+  [Terrain] Using synthetic DEM for Kullu
+  Step 2/7: Processing satellite imagery...
+python : C:\Users\mkt
+ha\.gemini\antigravit
+y\scratch\disaster_pr
+ediction_hp\src\image
+_processing\ndvi_proc
+essor.py:31: 
+RuntimeWarning: 
+invalid value 
+encountered in divide
+At line:1 char:186
++ ... nd -Encoding 
+utf8; python main.py 
+predict --region 
+Kullu 2>&1 | Out-F 
+...
++                    
+    ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (C:\User   
+ s\mktha\...tered    
+ in divide:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ndvi = 
+np.where(denominator 
+> 0, (nir - red) / 
+denominator, 0)
+    NDWI Water Expansion: 71.2%
+    NDVI Vegetation Loss: 70.5%
+    Terrain Type: difficult
+  Step 3/7: CNN satellite image classification...
+    CNN Prediction: flood (100.0% confidence)
+  Step 4/7: LSTM rainfall forecasting...
+    Max Predicted Rainfall: 38.5 mm
+    Extreme Probability: 25.7%
+  Step 5/7: Ensemble model collaboration...
+    Disaster Probability: 81.4%
+    Severity: Critical
+  Step 6/7: Computing composite risk score...
+    Risk Score: 0.4973 (Medium)
+  Step 7/7: Optimizing relief strategy...
+    Action: AIR_EVACUATION
+
+=================================================================
+  ≡ƒÄ» DISASTER PREDICTION REPORT ΓÇö KULLU
+=================================================================
+  ≡ƒôà Generated: 2026-02-22 11:05:46
+
+  ΓöÇΓöÇ RISK OVERVIEW ΓöÇΓöÇ
+  Disaster Probability : 81.4%
+  Severity Level       : Critical
+  Disaster Type        : Flood
+  Risk Score           : 0.4973
+
+  ΓöÇΓöÇ MODEL CONTRIBUTIONS (Ensemble) ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Model         Γöé Weight   Γöé   Raw Value Γöé   Weighted Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé CNN           Γöé 30%      Γöé      1      Γöé     0.3    Γöé
+Γöé LSTM          Γöé 25%      Γöé      0.2567 Γöé     0.0642 Γöé
+Γöé RANDOM_FOREST Γöé 20%      Γöé      1      Γöé     0.2    Γöé
+Γöé XGBOOST       Γöé 25%      Γöé      0.9987 Γöé     0.2497 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ RISK SCORE BREAKDOWN ΓöÇΓöÇ
+Γò¡ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò«
+Γöé Factor          Γöé Weight   Γöé   Value Γöé   Contribution Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé Rainfall        Γöé 40%      Γöé  0.1331 Γöé         0.0533 Γöé
+Γöé Slope           Γöé 30%      Γöé  1      Γöé         0.3    Γöé
+Γöé Water Expansion Γöé 20%      Γöé  0.712  Γöé         0.1424 Γöé
+Γöé Construction    Γöé 10%      Γöé  0.0166 Γöé         0.0017 Γöé
+Γò░ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓò»
+
+  ΓöÇΓöÇ 7-DAY RAINFALL FORECAST ΓöÇΓöÇ
+  Day 1:   31.5 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 2:   33.4 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 3:   38.5 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 4:   37.8 mm ΓûêΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 5:   34.8 mm ΓûêΓûêΓûêΓûêΓûêΓûê
+  Day 6:   29.5 mm ΓûêΓûêΓûêΓûêΓûê
+  Day 7:   27.1 mm ΓûêΓûêΓûêΓûêΓûê
+  Extreme Event Probability: 25.7% 
+
+  ΓöÇΓöÇ RELIEF STRATEGY ΓöÇΓöÇ
+  Action   : AIR_EVACUATION
+  Priority : CRITICAL ΓÇö IMMEDIATE
+  Reasoning: CRITICAL: Flood detected with high risk score (0.50). Immediate air evacuation required. Roads may be compromised.
+
+  Deployment:
+    Type                          : Emergency helicopter evacuation
+    Source                        : All available air assets
+    Estimated Arrival Hours       : 1
+    Helicopters Needed            : 4
+    Estimated Evacuees            : 248
+
+  Resources Required:
+    Medical Teams                 : 7
+    Emergency Rations             : 1491
+    Rescue Personnel              : 74
+    Temporary Shelters            : 39
+    Medical Supplies Kg           : 497
+    Evacuation Centers            : 2
+
+  ΓöÇΓöÇ OPTIMAL ROUTE ΓöÇΓöÇ
+  From     : Kullu Relief Center
+  Route    : Kullu Relief Center ΓåÆ Kullu
+  Distance : 3 km
+  ETA      : 0.1 hours
+
+=================================================================
+
+
+  [Map] Interactive map saved: C:\Users\mktha\.gemini\antigravity\scratch\disaster_prediction_hp\outputs\disaster_map.html
+  [Report] HTML report saved: C:\Users\mktha\.gemini\antigravity\scratch\disaster_prediction_hp\outputs\report.html
+
+Γ£à Prediction complete! Check the outputs/ directory.
